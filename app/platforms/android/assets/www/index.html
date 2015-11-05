@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Control Leds</title>
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
+        <link type="text/css" href="css/app.css" rel="stylesheet" />
+    </head>
+
+    <body style="padding-top:10px;">
+        <!--<div class="app">
+            <div id="ui">
+                <button id="connectButton">Connect</button>
+            </div>
+            <div id="message">Hello.</div>
+            <div style="padding:20px;">
+                <input id="dataIn" type="text" placeholder="ingrese data">
+                <button id="btnSend">Enviar</button>
+            </div>
+        </div>-->
+        <button style="background:tomato;" id="connectButton">Conectar</button>
+        <div id="message"></div>
+
+        <div align="center" id="splash">
+            <img width="100%" src="img/udep.png">
+            <span>
+                Cargando Aplicación...
+            </span>
+        </div>
+
+
+        <div id="login" align="center" class="seccion">
+            <h1>LOGIN</h1>
+            <div><input id="userIn" type="text" placeholder="Ingrese Usuario"></div>
+            <div><input id="passIn" type="password" placeholder="Ingrese contraseña"></div>
+            <button onclick="logear()">Enviar</button>
+
+            <div>
+                <button onclick="irSeccion('crear')">Crear usuario</button>
+            </div>
+        </div>
+
+        <div id="menu" align="center" class="seccion">
+           
+            <div class="botones">
+                <button onclick="encenderLed(1)">Encender Led 1</button>
+                <button onclick="apagarLed(1)">Apagar Led 1</button>
+            </div>
+            <div class="botones">
+                <button onclick="encenderLed(2)">Encender Led 2</button>
+                <button onclick="apagarLed(2)">Apagar Led 2</button>
+            </div>
+            <div class="botones">
+                <button style="background:tomato;" onclick="irSeccion('login')">ir LOGIN</button>
+            </div>
+        </div>
+
+
+        <div id="crearuser" align="center" class="seccion">
+            <div><input id="usercrearIn" type="text" placeholder="Ingrese nuevo Usuario"></div>
+            <div><input id="passcrearIn" type="password" placeholder="ingrese contraseña"></div>
+            <button onclick="crearUser()">Enviar</button>
+             <button style="background:tomato;" onclick="irSeccion('login')">ir Atras</button>
+        </div>
+
+
+
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script>
+            app.initialize();
+        </script>
+    </body>
+</html>
